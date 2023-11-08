@@ -6,7 +6,10 @@ gti config --local user.email ""
 
 # nowe repo
 git init
-
+# połączenie z github
+git remote add origin "(link https z github)"
+git config --local(global, ale nie dziala) user.name "nazwa"
+git config --local user.email "nazwa"
 # klonowanie repo
 git clone
 tworzy nowy katalog pw-spi

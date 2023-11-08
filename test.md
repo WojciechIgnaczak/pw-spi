@@ -47,4 +47,3 @@ git branch
 # usuwanie brancha
 git branch -d nazwa-brancha
 
-

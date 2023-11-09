@@ -70,3 +70,7 @@ git config --list
 git help
 
 git help config
+
+# pokazuje zmiany w pliku ktory jest
+git diff  =w changes
+git diff --staged =wstaged changes

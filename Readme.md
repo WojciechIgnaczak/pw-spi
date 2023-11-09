@@ -79,7 +79,8 @@ feature, refactor,bugfix,hotfix,release
 
 git branch feature/1-dodanie strony (dodanie nowego brancha do folderu feature)
 
-
+# Mergowanie zmian na branchach
+git merge main (pobranie zmian z brancha main, do aktualnego brancha)
 
 
 # git config

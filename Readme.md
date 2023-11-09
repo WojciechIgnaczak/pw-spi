@@ -86,3 +86,6 @@ git reset HEAD Readme.md
 
 # wycofanie zmian w pliku do ostatniego commita
 git checkout -- Readme.md
+
+# add, mod, delele remote url
+git remote -v

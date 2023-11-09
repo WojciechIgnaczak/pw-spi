@@ -94,5 +94,6 @@ git remote add nazwa URL  - dodaje nowe repozytorium do push i fetch, ale i tak 
 git push nazwa - wyrzuca do repo o nazwie nazwa
 git remote remove nazwa -usuwa repo o nazwie nazwa
 
+
 # strona, która pokazuje co wrzucic do .gitignore
 https://www.toptal.com/developers/gitignore

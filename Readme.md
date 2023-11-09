@@ -54,7 +54,7 @@ git pull
 # wypchnij zmiany
 git push
 
-## BRANCHE
+# BRANCHE
 
 # utwórz branch
 

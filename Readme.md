@@ -54,10 +54,16 @@ git pull
 # wypchnij zmiany
 git push
 
+## BRANCHE
+
 # utwórz branch
-git checkout -b nazwa-brancha
 
 git branch nazwa-brancha
+
+
+git checkout -b nazwa-brancha (przepiecie sie na inny branch)
+
+
 
 # lista brancha
 git branch
@@ -67,6 +73,14 @@ git branch -d nazwa-brancha
 
 # ustawienie default branch
 git config --global init.defaultBranch main
+
+# foldery branch
+feature, refactor,bugfix,hotfix,release
+
+git branch feature/1-dodanie strony (dodanie nowego brancha do folderu feature)
+
+
+
 
 # git config
 git config --list --show-origin
@@ -112,12 +126,19 @@ git remote remove nazwa -usuwa repo o nazwie nazwa
 # strona, która pokazuje co wrzucic do .gitignore
 https://www.toptal.com/developers/gitignore
 
+# strona, konwencje nazewnictwa 
+https://semver.org/lang/pl/
+
 # dodawanie tagów
 git tag -a v1.3 -m"fix poprawy wydajnosci"
 
 git tag
 
 git show v1.3 - pokazuje kiedy i na jaki commint jest podpiety
+
+gti push origin --tags (wypychanie tagów do repo)
+
+git tag -d v1.3 (usuwa tag)
 
 # standart nazw branch
 -main/master
@@ -127,3 +148,5 @@ git show v1.3 - pokazuje kiedy i na jaki commint jest podpiety
 -dev
 
 -devqu (do testów)
+
+# aliasy (skrocenie komend git)

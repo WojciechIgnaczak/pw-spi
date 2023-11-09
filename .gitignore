@@ -1,0 +1,9 @@
+#ignore diretory temp
+/temo
+
+# all directory in folder name
+temp/
+
+#all file
+*.txt
+

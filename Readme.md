@@ -20,7 +20,7 @@ gti clone https://github.com/WojciechIgnaczak/pw-spi.git .
 
 gti clone https://github.com/WojciechIgnaczak/pw-spi.git /nowy katalog
 
-# dodawanie plików do staging - 
+# dodawanie plików do staging 
 git add nazwa-pliku
 git add . - wszystkie
 git add *.py (dodaje wszystkie pliki .py)
@@ -74,3 +74,9 @@ git help config
 # pokazuje zmiany w pliku ktory jest
 git diff  =w changes
 git diff --staged =wstaged changes
+
+# pokazuje commity w pliku
+git log
+
+# cofanie zmian poprzez 
+git rebase

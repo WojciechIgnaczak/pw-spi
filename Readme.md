@@ -80,3 +80,9 @@ git log
 
 # cofanie zmian poprzez 
 git rebase
+
+# resetowanie zmian z ostatniego stage(wyrzuca z changes)
+git reset HEAD Readme.md
+
+# wycofanie zmian w pliku do ostatniego commita
+git checkout -- Readme.md

@@ -45,7 +45,7 @@ git commit -m "zmiany"
 # status zmian (na jakich plikach)
 git status
 
-# pobranie zmian z repo
+# pobranie zmian z repo remote
 git fetch
 
 # pobierz zmiany

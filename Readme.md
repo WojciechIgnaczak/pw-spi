@@ -403,9 +403,8 @@ git merge origin/dev --strategy-option  ours/theirs            -nasze/wszystkie 
 git merge --abort               -przerywa mergowanie
 
 
-
-
 git merge vs rebase https://furkangulsen.medium.com/git-rebase-vs-git-merge-cfbe9e7ba2c5
 
+git cherry-pick [id commita]  -              
 
 pobierz z repo inf ile commitow w ostatnich czasie bylo i w formie tabelki kto co robil

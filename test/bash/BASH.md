@@ -49,3 +49,30 @@ d           rwx           rwx       rwx
 
 katalog     user           group   other
 
+#Tworzenie nowego pliku bash
+
+otworz
+plik.sh
+
+nadaj uprawniena
+ $chmod +x plik.sh
+
+w pliku
+#!/bin/bash
+##########################
+
+
+listowanie pliku w katalogach
+ls ../          cofa sie do nadrzdnego katalogu
+ls ../ -l       wyswietla szczegolowe dane
+ls ../ -lS     sortuje po rozmiarze
+ls ../ -lSr     odwraca sortowanie
+ls ../ -lSra    pokazuje pliki ukryte
+ls ../ -lSrah   pokazuje rozmiar w kilobajtach
+ls ../ -lSt      sortuje po dacie
+ls ../ltrah | grep .py  wszystkie nazwy py
+ls -1   pokazuje pliki w kolumnie
+ls katalog1 katalog2    wyswietla 2 kaalogi
+
+
+-f      sprawdza exist

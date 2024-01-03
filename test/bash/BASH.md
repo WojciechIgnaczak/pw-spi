@@ -76,3 +76,22 @@ ls katalog1 katalog2    wyswietla 2 kaalogi
 
 
 -f      sprawdza exist
+
+otwiera edytor tekstu
+nano [nazwa_pliku]
+
+zmienne z duzych liter
+AGE=25
+
+ctrl + s -> ctrl+x(zapis i wyjscie do termial)
+
+readonly =stala zmienna 
+
+env | grep AGE  szuka zmiennej
+printenv    wyswietlanie wszystkich zmiennych
+printenv AGE wyswietla wartosc danej zmiennej
+prntenv > env.txt     dodaje zmienne srodowiskowe do pliku env.txt
+sudo -u nazwa_usera printenv    wyswietlanie zmiennych srodowiskowych innego usera
+
+
+Ścieżka do pliku w bash: //eos/STUDENTs$/334535/Desktop/spi

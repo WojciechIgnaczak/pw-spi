@@ -93,5 +93,7 @@ printenv AGE wyswietla wartosc danej zmiennej
 prntenv > env.txt     dodaje zmienne srodowiskowe do pliku env.txt
 sudo -u nazwa_usera printenv    wyswietlanie zmiennych srodowiskowych innego usera
 
+curl
+wget
 
 Ścieżka do pliku w bash: //eos/STUDENTs$/334535/Desktop/spi

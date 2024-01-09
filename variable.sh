@@ -1,4 +1,3 @@
-#!/bin/bash
 
 #tworzenie zmiennych
 AGE=25

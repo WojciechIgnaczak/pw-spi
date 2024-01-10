@@ -27,384 +27,394 @@ git clone https://github.com/WojciechIgnaczak/pw-spi.git /nowy katalog
 
 git clone --branch [branch-name] [url] -pobranie konkretnego brancha
 
-git clone --depth 1 [url]  -pobranie historii ostatniego commitu
+git clone --depth 1 [url]  -pobranie historii ostatniego commitu 
 
-git clone --mirror [url] -pobiera wszystkie branche tagi
-
-
-# dodawanie plików do staging 
-git add nazwa-pliku
-
-git add [katalog]
-
-git add .       git add -A  - wszystkie
-
-git add "*.py" (dodaje wszystkie pliki .py)
-
-git add Readme.md index.html (dodaje wybrane pliki)
-
-git commit -a -m "mess"     -dodaje i commituje
-
-git add -h (info  o parametrach)
-
-git add -u  -dodaje wszystkie pliki zmodyfikowane
-
-git add --ignore-remoal -dodaje wszystki z wyjatkiem usunietych
-
-# komitowanie zmian
-git commit -m "zmiany"
-
-git commit -am "mess"     -dodaje i commituje
-
-git commit --amend -m  "message"     -korekta ostatniego commitu
-
-git commit --amend --no-edit           -dodaje do istniejacego commita dodatkowy plik
-
-git commit --allow-empty -m "pusty commit"
-
-git commit -m "1 linia komentarza" -m "2 linia komentarza"
-
-git status          - jaki status w repozytorium
-
-git status -s
-
-git status -u
-
-git status -b   -info o branchu w porownaniu do zdalnego repo
-
-git status --show-stash - wyswietla pliki ktore sa w stashu
-
-
-# pobranie zmian z repo remote
-git fetch
-
-#  pobranie zmiany brancha
-git pull
-
-git pull origin
-
-git pull origin dev     -pobiera z wybranego brancha
-
-git pull --verbose  -szczegolowe informacje o pobieraniu zmian
-
-git pull ---dry-run     -symuluje polaczenie 
-
-git pull --no-commit origin [nazwa bramcha]     -pobranie zmioan bez commitu
-
-# wypchnij zmiany
-git push
-
-# BRANCHE
-
-## utwórz branch
-
-git branch nazwa-brancha
-
-git checkout -b nazwa-brancha (przepiecie sie na inny branch)
-
-## lista brancha
-git branch
-
-## usuwanie brancha
-git branch -d nazwa-brancha
-
-## wymuszenie usuniecie brancha
-git branch -D
-
-# zmienia nazwy
-git branch-m
-
-# wyswietlenie wszytskich zdalnych branchy
-git branch -r
-# wyswietlenie wszytskich lokalnych branchy
-git branch -a
-# sprawdzenie na ktorym branchu jestem
-git branch --show-current
-
-# lista brachy zmergowanych
-git branch --merged
-
-# ktore branche maja dlug technologiczny 
-git branch --no-merged
-
-# ktore branche maja dlug technologiczny do konkretnego brancha
-git branch --no-merged [nazwa]
-
-# wyswietla branch ktory ma dany commit
-git branch --contains [commit]
-
-# wyswietlenie brachy posortowanych
-git branch --sort=[key]
-
-git branch --sort=committerdate     -sortuje po dacie dodawanie commitow
-
-# nowy branch od konkretnego brancha
-git branch [branch-name] [start-point]
-
-# skopiowanie brancha
-git branch copy feature-old feature-new
- # przenoszenie i zmiana brancha
- git branch --move [old][new]
+git clone --mirror [url] -pobiera wszystkie branche tag i 
  
- # wylistowac brancha jakims wzorcem
- git branch --list[pattern]
-# usuwanie zdalneego brancha
- git branch --delete --remotes [remote/branch]
 
-## ustawienie default branch
-git config --global init.defaultBranch main
+# dodawanie plików do staging  
+git add nazwa-plik u 
 
-## foldery branch
-feature, refactor,bugfix,hotfix,release
+git add [katalog ] 
 
-git branch feature/1-dodanie strony (dodanie nowego brancha do folderu feature)
+git add .       git add -A  - wszystki e 
 
-## Mergowanie zmian na branchach
-git merge main (pobranie zmian z brancha main, do aktualnego brancha)
+git add "*.py" (dodaje wszystkie pliki .py ) 
 
+git add Readme.md index.html (dodaje wybrane pliki ) 
 
-## git config
-git config --list --show-origin
+git commit -a -m "mess"     -dodaje i commituj e 
 
-git config --global core.editor "[edytor]" -zmiana edytora tekstowego
+git add -h (info  o parametrach ) 
 
-## lista configow
-git config --list
+git add -u  -dodaje wszystkie pliki zmodyfikowan e 
 
-git confir user.email
-## pomoc
-git help
+git add --ignore-remoal -dodaje wszystki z wyjatkiem usunietyc h 
 
-git help config
+# komitowanie zmia n
+git commit -m "zmiany " 
 
-## pokazuje zmiany w pliku ktory jest
-git diff  =w changes
+git commit -am "mess"     -dodaje i commituj e 
 
-git diff --staged =wstaged changes
+git commit --amend -m  "message"     -korekta ostatniego commit u 
 
-## pokazuje commity w pliku
-git log
+git commit --amend --no-edit           -dodaje do istniejacego commita dodatkowy pli k 
 
+git commit --allow-empty -m "pusty commit " 
 
-## resetowanie zmian z ostatniego stage(wyrzuca z changes)
-git reset HEAD Readme.md
+git commit -m "1 linia komentarza" -m "2 linia komentarza " 
 
-## wycofanie zmian w pliku do ostatniego commita
-git checkout -- Readme.md
+git status          - jaki status w repozytoriu m 
 
-# add, mod, delele remote url
+git status - s 
 
-git remote 
+git status - u 
 
-git remote -v
+git status -b   -info o branchu w porownaniu do zdalnego rep o 
 
-git remote add nazwa URL  - dodaje nowe repozytorium do push i fetch, ale i tak wysyła do origin
+git status --show-stash - wyswietla pliki ktore sa w stash u 
+ 
 
-git push nazwa - wyrzuca do repo o nazwie nazwa
+# pobranie zmian z repo remot e
+git fetc h 
 
-git remote remove nazwa -usuwa repo o nazwie nazwa
+#  pobranie zmiany branch a
+git pul l 
 
-git remote rm  [nazwa]-usuwa repo
+git pull origi n 
 
-git remote rename [old] [new]
+git pull origin dev     -pobiera z wybranego branch a 
 
-git remote show [origin]
+git pull --verbose  -szczegolowe informacje o pobieraniu zmia n 
 
-git remote update -aktualizuje wszystkie zdalne repozytoria
+git pull ---dry-run     -symuluje polaczenie   
 
-git remote set-url [name][url]  -nadpisuje
+git pull --no-commit origin [nazwa bramcha]     -pobranie zmioan bez commit u 
 
-git remote set-head [name] -a   ustawienie domyslnego repo do wypchniecia
+# wypchnij zmian y
+git pus h 
 
+# BRANCH E 
 
-# strona, która pokazuje co wrzucic do .gitignore
-https://www.toptal.com/developers/gitignore
+## utwórz branc h 
 
-# strona, konwencje nazewnictwa 
-https://semver.org/lang/pl/
+git branch nazwa-branch a 
 
-# TAGI
-git tag -a v1.3 -m"fix poprawy wydajnosci"
+git checkout -b nazwa-brancha (przepiecie sie na inny branch ) 
 
-git tag (utworzenie taga)
+## lista branch a
+git branc h 
 
-git show v1.3 - pokazuje kiedy i na jaki commint jest podpiety
+## usuwanie branch a
+git branch -d nazwa-branch a 
 
-git push origin --tags (wypychanie tagów do repo)
+## wymuszenie usuniecie branch a
+git branch - D 
 
-git tag -d v1.3 (usuwa tag)
+# zmienia nazw y
+git branch- m 
 
-git tag -a [tagname] -m "message"
+# wyswietlenie wszytskich zdalnych branch y
+git branch - r
+# wyswietlenie wszytskich lokalnych branch y
+git branch - a
+# sprawdzenie na ktorym branchu jeste m
+git branch --show-curren t 
 
-git tag -l [pattern]    -wyszukiwanie wszystkich tagów o danym wzorcu
+# lista brachy zmergowanyc h
+git branch --merge d 
 
-git checkout [tagname]      -powrot do danego taga
+# ktore branche maja dlug technologiczny  
+git branch --no-merge d 
 
-# standart nazw branch
--main/master
+# ktore branche maja dlug technologiczny do konkretnego branch a
+git branch --no-merged [nazwa ] 
 
--stage
+# wyswietla branch ktory ma dany commi t
+git branch --contains [commit ] 
 
--dev
+# wyswietlenie brachy posortowanyc h
+git branch --sort=[key ] 
 
--devqu (do testów)
+git branch --sort=committerdate     -sortuje po dacie dodawanie commito w 
 
-# git config
-git config --global alias.[alias_name] '[command]'
+# nowy branch od konkretnego branch a
+git branch [branch-name] [start-point ] 
 
-git config --global alias.st 'status'
+# skopiowanie branch a
+git branch copy feature-old feature-ne w
+ # przenoszenie i zmiana branch a
+ git branch --move [old][new ]
+  
+ # wylistowac brancha jakims wzorce m
+ git branch --list[pattern ]
+# usuwanie zdalneego branch a
+ git branch --delete --remotes [remote/branch ] 
 
-git config --global core.autocrlf [true|false|input]        -cos ze znakami koncowymi /n /r
+## ustawienie default branc h
+git config --global init.defaultBranch mai n 
 
-git config --global core.ignorcase [true/false]         -ignoruje wielkosc liter
+## foldery branc h
+feature, refactor,bugfix,hotfix,releas e 
 
-git config --global merge.tool [tool]
+git branch feature/1-dodanie strony (dodanie nowego brancha do folderu feature ) 
 
-git config --global diff.tool [tool]
+## Mergowanie zmian na branchac h
+git merge main (pobranie zmian z brancha main, do aktualnego brancha ) 
+ 
 
-git config --global core.filemode [true/false]
+## git confi g
+git config --list --show-origi n 
 
-# zmiany na branchach rebase vs merge
-git rebase  -przenosi wszystkie brakujace commity z brancha do brancha glownego
+git config --global core.editor "[edytor]" -zmiana edytora tekstoweg o 
 
-git merge 
+## lista configo w
+git config --lis t 
 
+git confir user.emai l
+## pomo c
+git hel p 
 
-# checkouty -praca na branchach
-git checkout -b nazwa-brancha (tworzenie nowego brancha)
+git help confi g 
 
-git checkout [commit-hash]
+## pokazuje zmiany w pliku ktory jes t
+git diff  =w change s 
 
-git checkout -- [file-name] (przywraca stan z ostatniego commita)
+git diff --staged =wstaged change s 
 
-git checkout [nazwa brancha]--[nazwa pliku] (kopowanie konkretnego pliku z innego brancha)
+## pokazuje commity w plik u
+git lo g 
+ 
 
-git checkout -  (przelaczenie sie do ostaniego uzywango brancha)
+## resetowanie zmian z ostatniego stage(wyrzuca z changes )
+git reset HEAD Readme.m d 
 
-git checkout [tag-name] -wracanie do danej wersji np v1.0.0
+## wycofanie zmian w pliku do ostatniego commit a
+git checkout -- Readme.m d 
 
+# add, mod, delele remote ur l 
 
+git remote   
 
-# reset (wycofywanie zmian z repozytorium)
-git reset   -wycofywanie zmian z repozytorium do ostatniego commita
+git remote - v 
 
-git reset [file] - wycofuje dany z stagingu
+git remote add nazwa URL  - dodaje nowe repozytorium do push i fetch, ale i tak wysyła do origi n 
 
-git reset --soft [commit] - wycofanie do konkretnego commita
+git push nazwa - wyrzuca do repo o nazwie nazw a 
 
-git reset --hard [commit] -usuwa zmiany do ostatnieego commita
+git remote remove nazwa -usuwa repo o nazwie nazw a 
 
-git reset --hard HEAD~1
+git remote rm  [nazwa]-usuwa rep o 
 
-git reset --keep [commit] - wycofuje i zachowuje zmiany
+git remote rename [old] [new ] 
 
-# tymczasowo odklada niezatwierdzone zmiany
-git stash  - odklada na stash
+git remote show [origin ] 
 
-git stash pop - susuwa ze stash
+git remote update -aktualizuje wszystkie zdalne repozytori a 
 
-git stash clear -czysci stash
+git remote set-url [name][url]  -nadpisuj e 
 
-git stash drop [nazwa brancha]
+git remote set-head [name] -a   ustawienie domyslnego repo do wypchnieci a 
+ 
 
-git stash list -pokazuje liste stashy
+# strona, która pokazuje co wrzucic do .gitignor e
+https://www.toptal.com/developers/gitignor e 
 
-git stash show -
+# strona, konwencje nazewnictwa  
+https://semver.org/lang/pl / 
 
-# git fetch
-git fetch           - pobiera zmiany z remote repo
+# TAG I
+git tag -a v1.3 -m"fix poprawy wydajnosci " 
 
-git fetch origin main   -odswiezy branch main
+git tag (utworzenie taga ) 
 
-git fetch --tags    -pobiera tagi
+git show v1.3 - pokazuje kiedy i na jaki commint jest podpiet y 
 
-git fetch --all     -pobiera wszystkie zmiany z repo
+git push origin --tags (wypychanie tagów do repo ) 
 
-git fetch --prune   -pobiera zmiany i liwkiduje remote połączenie
+git tag -d v1.3 (usuwa tag ) 
 
-# git pull
+git tag -a [tagname] -m "message " 
 
-git pull origin [nazwa brancha]     
+git tag -l [pattern]    -wyszukiwanie wszystkich tagów o danym wzorc u 
 
-git pull    -pobiera zmiany zdalne do lokalnego repo
+git checkout [tagname]      -powrot do danego tag a 
 
-git pull --verbose
+# standart nazw branc h
+-main/maste r 
 
-git push origin [nazwa brancha]
+-stag e 
 
-git pull --rebase origin [nazwa brancha]    -pobierze wszystkie zmiany i wepchnie jako  commit
+-de v 
 
-git pull origin [nazwa brancha] --no-commit      -pobierani zmian z repo jako pliki modyfikowane, bez commitowania ich
+-devqu (do testów ) 
 
+# git confi g
+git config --global alias.[alias_name] '[command] ' 
 
-# logi
-git log  -wypisuje wszystkie commity
+git config --global alias.st 'status ' 
 
-git log -n 3    -wypisuje 3 ostatnie commity
+git config --global core.autocrlf [true|false|input]        -cos ze znakami koncowymi /n / r 
 
-git log -n 3 --oneline  -wypisuje 3 ost commity w formie skróconej
+git config --global core.ignorcase [true/false]         -ignoruje wielkosc lite r 
 
-git log --since='3 day ago' -ile i jakie komity pojawily sie w ostatnich 3 dniach
+git config --global merge.tool [tool ] 
 
-git log --since='3 day ago' > log.txt -zapisz do pliku
+git config --global diff.tool [tool ] 
 
-git log --since='3 day ago' >> log.txt -dopisz do pliku
+git config --global core.filemode [true/false ] 
 
-git log --author='WojciechUIgnaczak' -pkazuje jakie commity zrobil 'wojciechignaczak'
+# zmiany na branchach rebase vs merg e
+git rebase  -przenosi wszystkie brakujace commity z brancha do brancha glowneg o 
 
-git log --grep='[szukane slowo]'    -wyszukuje commity z podanym slowem
+git merge   
+ 
 
-git log [nazwa pliku]       -wszystki commity w pliku
+# checkouty -praca na branchac h
+git checkout -b nazwa-brancha (tworzenie nowego brancha ) 
 
-git log --help
+git checkout [commit-hash ] 
 
-git log --after='[data]' --before='[data]'          -commity w danym okresie czasu
+git checkout -- [file-name] (przywraca stan z ostatniego commita ) 
 
-# diff
-git diff        -zmiany w plikach nie skommitowane
+git checkout [nazwa brancha]--[nazwa pliku] (kopowanie konkretnego pliku z innego brancha ) 
 
-git diff  --staged  -zmiany w pliku w staged 
+git checkout -  (przelaczenie sie do ostaniego uzywango brancha ) 
 
-git diff [1 commit] [2 commit]      -porownuje 2 commity
+git checkout [tag-name] -wracanie do danej wersji np v1.0. 0 
+ 
+ 
 
-git diff [nazwa brancha] [nazwa brancha]    -porownanie 2 branchy
+# reset (wycofywanie zmian z repozytorium )
+git reset   -wycofywanie zmian z repozytorium do ostatniego commit a 
 
-git diff [1 commit] [2 commit] --name-only      w ktorych plikach byly commity
+git reset [file] - wycofuje dany z staging u 
 
-git diff [1 commit] -- [nazwa pliku]    -czy w tym komicie sa zmiany w pliku i jakie
+git reset --soft [commit] - wycofanie do konkretnego commit a 
 
-git diff [nazwa brancha]        -porownanie aktuslnego brancha z branchem nazwa brancha
+git reset --hard [commit] -usuwa zmiany do ostatnieego commit a 
 
-git diff [nazwa brancha] --stat         -status zmian
+git reset --hard HEAD~ 1 
 
+git reset --keep [commit] - wycofuje i zachowuje zmian y 
 
-# revert
+# tymczasowo odklada niezatwierdzone zmian y
+git stash  - odklada na stas h 
 
-git revert      -odrzucenie/wycofane zmian poprzez mowy commit
+git stash pop - susuwa ze stas h 
 
-git revert [id kommita] -wycofanie sie do danego commita
+git stash clear -czysci stas h 
 
-git revert  HEAD  -wycofa zmiany w ostatnim commicie
+git stash drop [nazwa brancha ] 
 
-git revert [id commita] --no-commit -wycofa zmiany bez commitowania
+git stash list -pokazuje liste stash y 
 
-git revert --abort  -przerywa reverta 
+git stash show  - 
 
+# git fetc h
+git fetch           - pobiera zmiany z remote rep o 
 
-# merge
-git merge [nazwa brancha] -nazwa brancha z ktorego chcemy pobrac zmiany
+git fetch origin main   -odswiezy branch mai n 
 
-git merge origin/dev --squash -wszystkie te zmiany w 1 commit
+git fetch --tags    -pobiera tag i 
 
-git merge origin/dev --ff-only      -nadpisze wszelkie zmiany z deva na moj branch
+git fetch --all     -pobiera wszystkie zmiany z rep o 
 
-git merge origin/dev --strategy-option  ours/theirs            -nasze/wszystkie inne      zmiany sa wazniejsze niz inne/nasze
+git fetch --prune   -pobiera zmiany i liwkiduje remote połączeni e 
 
-git merge --abort               -przerywa mergowanie
+# git pul l 
 
+git pull origin [nazwa brancha]       
 
-git merge vs rebase https://furkangulsen.medium.com/git-rebase-vs-git-merge-cfbe9e7ba2c5
+git pull    -pobiera zmiany zdalne do lokalnego rep o 
 
-git cherry-pick [id commita]  -              
+git pull --verbos e 
 
-pobierz z repo inf ile commitow w ostatnich czasie bylo i w formie tabelki kto co robil
+git push origin [nazwa brancha ] 
+
+git pull --rebase origin [nazwa brancha]    -pobierze wszystkie zmiany i wepchnie jako  commi t 
+
+git pull origin [nazwa brancha] --no-commit      -pobierani zmian z repo jako pliki modyfikowane, bez commitowania ic h 
+ 
+
+# log i
+git log  -wypisuje wszystkie commit y 
+
+git log -n 3    -wypisuje 3 ostatnie commit y 
+
+git log -n 3 --oneline  -wypisuje 3 ost commity w formie skrócone j 
+
+git log --since='3 day ago' -ile i jakie komity pojawily sie w ostatnich 3 dniac h 
+
+git log --since='3 day ago' > log.txt -zapisz do plik u 
+
+git log --since='3 day ago' >> log.txt -dopisz do plik u 
+
+git log --author='WojciechUIgnaczak' -pkazuje jakie commity zrobil 'wojciechignaczak ' 
+
+git log --grep='[szukane slowo]'    -wyszukuje commity z podanym slowe m 
+
+git log [nazwa pliku]       -wszystki commity w plik u 
+
+git log --hel p 
+
+git log --after='[data]' --before='[data]'          -commity w danym okresie czas u 
+
+# dif f
+git diff        -zmiany w plikach nie skommitowan e 
+
+git diff  --staged  -zmiany w pliku w staged   
+
+git diff [1 commit] [2 commit]      -porownuje 2 commit y 
+
+git diff [nazwa brancha] [nazwa brancha]    -porownanie 2 branch y 
+
+git diff [1 commit] [2 commit] --name-only      w ktorych plikach byly commit y 
+
+git diff [1 commit] -- [nazwa pliku]    -czy w tym komicie sa zmiany w pliku i jaki e 
+
+git diff [nazwa brancha]        -porownanie aktuslnego brancha z branchem nazwa branch a 
+
+git diff [nazwa brancha] --stat         -status zmia n 
+ 
+
+# rever t 
+
+git revert      -odrzucenie/wycofane zmian poprzez mowy commi t 
+
+git revert [id kommita] -wycofanie sie do danego commit a 
+
+git revert  HEAD  -wycofa zmiany w ostatnim commici e 
+
+git revert [id commita] --no-commit -wycofa zmiany bez commitowani a 
+
+git revert --abort  -przerywa reverta   
+ 
+
+# merg e
+git merge [nazwa brancha] -nazwa brancha z ktorego chcemy pobrac zmian y 
+
+git merge origin/dev --squash -wszystkie te zmiany w 1 commi t 
+
+git merge origin/dev --ff-only      -nadpisze wszelkie zmiany z deva na moj branc h 
+
+git merge origin/dev --strategy-option  ours/theirs            -nasze/wszystkie inne      zmiany sa wazniejsze niz inne/nasz e 
+
+git merge --abort               -przerywa mergowani e 
+ 
+
+git merge vs rebase https://furkangulsen.medium.com/git-rebase-vs-git-merge-cfbe9e7ba2c 5 
+
+git cherry-pick [id commita]  -                
+
+pobierz z repo inf ile commitow w ostatnich czasie bylo i w formie tabelki kto co robi l 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+git add . 
+git commit -m "message"
